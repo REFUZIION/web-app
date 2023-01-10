@@ -29,7 +29,7 @@ namespace LoginApp
                 // Send the request data to the website
                 byte[] response = client.UploadValues("http://localhost/web-app/auth/api/api-login.php", "POST", data);
                 string responseString = System.Text.Encoding.Default.GetString(response);
-                if (responseString == "success")
+                if (responseString == "true")
                 {
                     // Login successful
                     MainForm mainForm = new MainForm();
